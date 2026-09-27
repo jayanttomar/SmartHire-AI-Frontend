@@ -1,0 +1,53 @@
+.modal-backdrop {
+  background: rgba(17, 25, 63, .56);
+  backdrop-filter: blur(5px);
+}
+
+.candidate-review-modal {
+  position: relative;
+  width: min(760px, 100%);
+  max-height: min(88vh, 850px);
+  overflow: auto;
+  padding: 30px;
+  border: 1px solid #e3e6f2;
+  border-radius: 18px;
+  color: #293150;
+  background: #fff;
+  box-shadow: 0 28px 75px rgba(8, 13, 45, .35);
+}
+
+.candidate-review-heading { display: flex; align-items: center; gap: 12px; margin: 13px 0 22px; }
+.candidate-review-heading > div { flex: 1; }
+.candidate-review-heading .pipeline-avatar { width: 48px; height: 48px; border-radius: 14px; font-size: 14px; }
+.candidate-review-heading h2 { margin: 0 0 4px; color: #20284c; font-size: 24px; }
+.candidate-review-heading p, .candidate-review-modal section > p { margin: 0; color: #68718d; font-size: 12px; line-height: 1.6; }
+.candidate-review-modal section { padding: 18px 0; border-top: 1px solid #e9ebf4; }
+.candidate-review-modal section h4 { margin: 0 0 10px; color: #3b4264; font-size: 13px; }
+.candidate-review-modal section p + p { margin-top: 9px; }
+.candidate-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.candidate-links a { padding: 6px 9px; border-radius: 7px; color: #514bc1; background: #f0efff; font-size: 11px; font-weight: 800; text-decoration: none; }
+.candidate-links a:hover { background: #e5e3ff; }
+.candidate-resume-content {
+  max-height: 390px;
+  overflow: auto;
+  margin: 0;
+  padding: 18px;
+  border: 1px solid #e4e7f0;
+  border-radius: 10px;
+  color: #303a59;
+  background: #fafbff;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 13px;
+  line-height: 1.65;
+  white-space: pre-wrap;
+}
+.resume-loading { display: flex; align-items: center; gap: 8px; color: #625bd0 !important; }
+.pipeline-match.is-unavailable { min-width: 92px; color: #9a681d; border-color: #f2d9a6; background: #fff8e9; }
+.pipeline-match.is-unavailable b { font-size: 21px; line-height: 1; }
+
+@media (max-width: 560px) {
+  .candidate-review-modal { max-height: 94vh; padding: 23px 18px; border-radius: 14px; }
+  .candidate-review-heading { align-items: flex-start; flex-wrap: wrap; }
+  .candidate-review-heading .status-pill { margin-left: 60px; }
+  .candidate-resume-content { max-height: 320px; padding: 13px; font-size: 12px; }
+}

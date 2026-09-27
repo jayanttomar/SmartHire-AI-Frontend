@@ -10,7 +10,9 @@ export default defineConfig({
   cacheDir: join(tmpdir(), 'smarthire-vite-cache'),
   server: {
     proxy: {
-      '/api': { target: 'http://localhost:8080', changeOrigin: true },
+      // Use IPv4 explicitly: Windows can resolve localhost differently between
+      // the browser and Vite's proxy, causing intermittent fetch failures.
+      '/api': { target: 'http://127.0.0.1:8080', changeOrigin: true },
     },
   },
 })
